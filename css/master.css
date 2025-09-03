@@ -1,0 +1,142 @@
+/* 
+    This is the main stylesheet for the QR code component project.
+    It defines color variables, layout, and responsive design.
+*/
+
+/* Root variables for colors used throughout the design */
+:root {
+    --card-color: hsl(212, 45%, 89%);
+    /* Light blue background for card */
+    --body-color: #ffffff;
+    /* White background for body */
+    --heading-color: hsl(218, 44%, 22%);
+    /* Dark blue for headings */
+    --text-color: hsl(220, 15%, 55%);
+    /* Grayish blue for text */
+}
+
+/* Ensure html and body take full height and remove default margin/padding */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styling: background, font, centering content with grid */
+body {
+    background-color: var(--body-color);
+    /* Set background color */
+    color: var(--text-color);
+    /* Set default text color */
+    font-family: "Outfit", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    /* Font stack */
+    margin: 0;
+    padding: 0;
+    place-items: center;
+    /* Center content vertically and horizontally */
+    display: grid;
+    /* Use CSS grid for layout */
+}
+
+/* Card container styling */
+.card {
+    display: block;
+    /* Block-level element */
+    width: 80%;
+    /* Card width */
+    background-color: var(--card-color);
+    /* Card background color */
+    margin: 20px;
+    /* Margin around card */
+    place-items: center;
+    /* Center content inside card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    min-width: 360px;
+    /* Minimum width for card */
+    min-height: 600px;
+    /* Minimum height for card */
+}
+
+/* Inner container for content */
+.container {
+    display: grid;
+    /* Use grid for layout */
+    width: 25%;
+    /* Container width */
+    background-color: white;
+    /* White background */
+    margin: 20px;
+    /* Margin inside card */
+    padding: 20px;
+    /* Padding inside container */
+    border-radius: 10px;
+    /* Rounded corners */
+    place-items: center;
+    /* Center content */
+    min-width: 300px;
+    /* Minimum width for container */
+}
+
+/* QR code image styling */
+.container img {
+    width: 100%;
+    /* Image takes full width of container */
+    border-radius: 10px;
+    /* Rounded corners for image */
+    display: block;
+    /* Block-level image */
+    text-align: center;
+    /* Center image (not necessary for block) */
+}
+
+/* Heading styling inside container */
+.container h1 {
+    font-size: 21px;
+    /* Heading font size */
+    color: var(--heading-color);
+    /* Heading color */
+    margin: 10px 0 5px 0;
+    /* Margin around heading */
+    text-align: center;
+    /* Center heading text */
+    line-height: 1.6;
+    /* Line height for readability */
+}
+
+/* Paragraph styling inside container */
+.container p {
+    font-size: 0.9em;
+    /* Slightly smaller font size */
+    color: var(--text-color);
+    /* Paragraph text color */
+    margin: 0;
+    /* Remove default margin */
+    text-align: center;
+    /* Center paragraph text */
+    line-height: 1.6;
+    /* Line height for readability */
+}
+
+/* Responsive design for mobile devices */
+@media(max-width:767px) {
+    .card {
+        width: 100%;
+        /* Full width on small screens */
+        height: 100%;
+        /* Full height on small screens */
+        margin: 0;
+        /* Remove margin */
+        box-shadow: none;
+        /* Remove shadow for flat look */
+    }
+
+    .container {
+         margin-top: 30%; /* Add space at the top*/
+       
+    }
+
+}
+       
+    
